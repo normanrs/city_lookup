@@ -1,24 +1,19 @@
-# README
+# City Lookup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple API created as an exercise to compare coding frameworks. My intention is to write this API as functionally identical in Rails, Sinatra, and then Node/Express. I'll then compare them in the following ways:
 
-Things you may want to cover:
+1. How many files does each take to get the job done?
+2. Is there a response-time difference when local calls are made?
+3. How many dependencies (gems/packages) are required?
+4. Which framework did I enjoy coding in the most?
 
-* Ruby version
+# Functionality
 
-* System dependencies
+The API will have two endpoints:
+1. /zipcode: supply a zip code, get returned data
+2. /city_state: supply city and state, get all the zip codes associated
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Dependencies
+- Ruby 2.6.6
+- Bundler 2.2.7
+- A local PostgreSQL database server (I used DBngin)
