@@ -1,6 +1,6 @@
 # City Lookup
 
-This is a simple API created as an exercise to compare coding frameworks. My intention is to write this API as functionally identical in Rails, Sinatra, and then Node/Express. I'll then compare them in the following ways:
+This is a simple API created as an exercise to compare coding frameworks. My intention is to write this same API in Rails, Sinatra, and Node/Express - all functionally identical. I'll then compare them in the following ways:
 
 1. How many files does each take to get the job done?
 2. Is there a response-time difference when local calls are made?
