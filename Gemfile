@@ -16,6 +16,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'factory_bot_rails'
+  gem 'faker'
   gem 'figaro'
   gem 'pry-byebug'
   gem 'rspec-rails'

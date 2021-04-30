@@ -1,9 +1,10 @@
 require 'rails_helper'
-describe 'the cities endpoint' do
+describe 'the zipcodes endpoint' do
   it 'returns city data by zipcode' do
-    entry      = create(:zipcode)
-    data = { zipcode: entry.zipcode }
-    get '/zipcode', params: data
+    entry = create(:zipcode)
+    test_code = entry.zipcode
+    require 'pry'; binding.pry
+    get "/zipcodes/#{test_code}"
 
     expect(response.status).to eq 200
     data = JSON.parse(response.body, symbolize_names: true)[:data]
