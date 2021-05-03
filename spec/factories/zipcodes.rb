@@ -1,29 +1,30 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :zipcode do
-    zipcode {
-      (00000..99999).to_a.sample
-    }
-    city {
+    zipcode do
+      (0o0000..99_999).to_a.sample
+    end
+    city do
       Faker::Address.city
-    }
-    state {
+    end
+    state do
       Faker::Address.state_abbr
-    }
-    lat {
+    end
+    lat do
       Faker::Address.latitude
-    }
-    long {
+    end
+    long do
       Faker::Address.longitude
-    }
-    timezone {
+    end
+    timezone do
       (-8..-4).to_a.sample
-    }
-    daylight_savings {
+    end
+    daylight_savings do
       [true, false].sample
-    }
-    geopoint {
+    end
+    geopoint do
       Faker::Number.decimal(l_digits: 2, r_digits: 5)
-    }
+    end
   end
-
 end

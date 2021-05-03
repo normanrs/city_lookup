@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 RSpec.describe ZipcodesController do
-  describe "GET #show" do
+  describe 'GET #show' do
     it 'returns city data by zipcode' do
       entry = create(:zipcode)
       test_code = entry.zipcode

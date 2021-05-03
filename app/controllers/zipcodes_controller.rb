@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ZipcodesController < ApplicationController
   before_action :set_zipcode, only: [:show]
 
@@ -39,13 +41,14 @@ class ZipcodesController < ApplicationController
   # end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_zipcode
-      @zipcode = Zipcode.find(params[:zipcode])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def zipcode_params
-      params.require(:zipcode).permit(:zipcode, :city, :state, :lat, :long, :timezone, :daylight_savings, :geopoint)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_zipcode
+    @zipcode = Zipcode.find(params[:zipcode])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def zipcode_params
+    params.require(:zipcode).permit(:zipcode, :city, :state, :lat, :long, :timezone, :daylight_savings, :geopoint)
+  end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,21 +12,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_29_205945) do
-
+ActiveRecord::Schema.define(version: 20_210_429_205_945) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "zipcodes", primary_key: "zipcode", id: :serial, force: :cascade do |t|
-    t.string "city"
-    t.string "state"
-    t.float "lat"
-    t.float "long"
-    t.integer "timezone"
-    t.string "daylight_savings"
-    t.float "geopoint"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'zipcodes', primary_key: 'zipcode', id: :serial, force: :cascade do |t|
+    t.string 'city'
+    t.string 'state'
+    t.float 'lat'
+    t.float 'long'
+    t.integer 'timezone'
+    t.boolean 'daylight_savings'
+    t.float 'geopoint'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
-
 end
