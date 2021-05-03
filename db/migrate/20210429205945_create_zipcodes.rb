@@ -1,14 +1,14 @@
 class CreateZipcodes < ActiveRecord::Migration[6.1]
   def change
-    create_table :zipcodes do |t|
-      t.string :zipcode
+    create_table :zipcodes, { id: false } do |t|
+      t.integer :zipcode, primary_key: true
       t.string :city
       t.string :state
-      t.string :lat
-      t.string :long
-      t.string :timezone
-      t.string :daylight_savings
-      t.string :geopoint
+      t.float :lat
+      t.float :long
+      t.integer :timezone
+      t.boolean :daylight_savings
+      t.float :geopoint
 
       t.timestamps
     end

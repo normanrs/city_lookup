@@ -15,15 +15,14 @@ ActiveRecord::Schema.define(version: 2021_04_29_205945) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "zipcodes", force: :cascade do |t|
-    t.string "zipcode"
+  create_table "zipcodes", primary_key: "zipcode", id: :serial, force: :cascade do |t|
     t.string "city"
     t.string "state"
-    t.string "lat"
-    t.string "long"
-    t.string "timezone"
+    t.float "lat"
+    t.float "long"
+    t.integer "timezone"
     t.string "daylight_savings"
-    t.string "geopoint"
+    t.float "geopoint"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
